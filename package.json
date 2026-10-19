@@ -1,0 +1,15 @@
+{
+  "name": "ranavista",
+  "private": true,
+  "description": "Ranavista — B2B RFQ marketplace (MERN): website, admin panel and API",
+  "scripts": {
+    "install:all": "npm --prefix server install && npm --prefix client install && npm --prefix admin install",
+    "seed": "npm --prefix server run seed",
+    "seed:demo": "npm --prefix server run seed -- --demo",
+    "dev": "concurrently -n api,web,admin -c green,yellow,cyan \"npm --prefix server run dev\" \"npm --prefix client run dev\" \"npm --prefix admin run dev\"",
+    "build": "npm --prefix client run build && npm --prefix admin run build"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1"
+  }
+}
